@@ -1,0 +1,127 @@
+/* IMPORTANT: Complete this activity without making changes to the HTML */
+
+/* Iteration 1: Attribute Selectors
+-------------------------------------
+1. Style only the anchor tag that has class "red".
+   Give it a red color and remove the underline.
+NOTE: only the anchor tag should be red, not the title
+
+<section id="iteration-1">
+      <h2 class="red">Iteration 1: Attribute Selectors</h2>
+      <a href="#iteration-5">Internal Link</a>
+      <a class="red" href="https://example.com">External Link</a>
+    </section>
+
+*/
+
+a.red {
+  color: red;
+  text-decoration: none;
+}
+
+/* YOUR CODE HERE */
+
+/* Iteration 2: Combinators
+-------------------------------------
+
+1. Style the <a> directly inside #iteration-2 with bold text (Don't select the anchor tags inside .menu)
+2. Style the <p> that comes *immediately* after .menu (sibling) with italic font.
+
+<section id="iteration-2">
+      <h2>Iteration 2: Child & Sibling Combinators</h2>
+      <a href="">Home</a>
+      <ul class="menu">
+        <li><a href="">About</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+      <p>This is a paragraph after the menu.</p>
+      <p>This is a paragraph at the end of the section</p>
+    </section>
+
+*/
+
+#iteration-2 > a {
+  font-weight: bold;
+  color: red;
+}
+
+.menu + p {
+  font-style: italic;
+}
+
+/* Iteration 3: Pseudo-classes
+-------------------------------------
+1. On the input, Add a different font color but only when the input is in focus.
+When you type it shuld be red.
+
+2. When hovering on the button, change the background color and cursor to a pointer.
+
+<section id="iteration-3">
+      <h2>Iteration 3: Pseudo-classes</h2>
+      <input type="text" placeholder="Focus on me" />
+      <button>Hover me!</button>
+    </section> 
+
+*/
+
+input:focus {
+  color: red;
+}
+
+button:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+/* Iteration 4: Pseudo-elements
+-------------------------------------
+1. Use ::before to add a quote mark ("❝ ") before the .quote text.
+2. Use ::after to add a decorative mark (" ❞") after the text.
+   Style them with a different font size or color if you like.
+
+<section id="iteration-4">
+      <h2>Iteration 4: Pseudo-elements</h2>
+      <p class="quote">CSS is fun when you know the tricks.</p>
+    </section>
+
+
+   */
+
+   .quote::before {
+      content: "❝ ";
+      color: #999;
+      font-size: 1.2em;
+    }
+    
+    .quote::after {
+      content: " ❞";
+      color: #999;
+      font-size: 1.2em;
+    }
+
+/* BONUS. Iteration 5: Checkbox + :checked
+-------------------------------------
+1. Hide .secret by default using the attribute: visibility: hidden
+2. When the checkbox (.toggle) is checked, display the element .secret.
+   (Hint: Use the :checked pseudo-class and sibling selector ~ )
+
+   <section id="iteration-5">
+      <h2>Iteration 5: Checkbox Trick</h2>
+      <input type="checkbox" class="toggle" id="reveal" />
+      <label for="reveal">Show secret</label>
+      <p class="secret">🎉 Surprise! You found the secret!</p>
+    </section>
+
+   */
+
+/* 1. Hide by default */
+.secret {
+   visibility: hidden;
+ }
+ 
+ /* 2. Show when checkbox is checked */
+ .toggle:checked ~ .secret {
+   visibility: visible;
+ }
+
+/* SOLUTION: https://gist.github.com/jorgeberrizbeitia/0b2cc87c4b110e446f11f2952d4e9f40 */

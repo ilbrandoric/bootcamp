@@ -1,0 +1,113 @@
+/* General Box Styling */
+.box,
+.item,
+.align-box,
+.absolute-box,
+.center-box {
+  background: lightblue;
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid navy;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Iteration 1: Basic Flexbox Row
+-------------------------------------
+1. Make .container-1 a flex container.
+2. Align the boxes in a horizontal row with equal spacing between them.
+|[A]             [B]             [C]|
+*/
+
+/* YOUR CODE HERE*/
+.container-1 {
+  display: flex;
+  justify-content: space-between;
+  outline: 4px solid red;
+}
+
+/* Iteration 2: Flexbox Column
+-------------------------------------
+1. Make .container-2 a flex container with vertical stacking.
+2. Center the items horizontally inside the container.
+|               [One]              |
+|               [Two]              |
+|              [Three]             |
+*/
+
+/* YOUR CODE HERE*/
+.container-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Iteration 3: Flexbox Alignment
+-------------------------------------
+1. Make .container-3 a flex container with height: 200px.
+2. Center .align-box both vertically and horizontally.
+|                                  |
+|          [Aligned Box]           |
+|                                  |
+*/
+
+/* YOUR CODE HERE*/
+.container-3 {
+  height: 200px;
+  background: #f0f0f0;
+  /* YOUR CODE HERE*/
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center; /* vertical centering */
+}
+
+/* Iteration 4: Absolute Positioning
+-------------------------------------
+1. Set .relative-container to position: relative. (this will allow you to position elements inside)
+2. Position .absolute-box absolutely at the bottom-right corner.
+3. Give the container a visible size (width/height) and border for context.
+|                                           |
+|                                           |
+|               [I'm absolutely positioned] |
+*/
+
+.relative-container {
+  /* outer "box"  */
+  width: 400px;
+  height: 200px;
+  background: #f0f0f0;
+  /* YOUR CODE HERE*/
+  position: relative;
+}
+
+/* YOUR CODE HERE*/
+.absolute-box {
+  /* inner "box" negates flexbox!  */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* BONUS. Iteration 5: Fixed Notification
+-------------------------------------
+1. Style .fixed-notification so it appears fixed at the bottom-right of the screen.
+2. Add some padding, background color, and border-radius for style.
+3. Make sure it stays visible even when you scroll the page.
+*/
+
+/* YOUR CODE HERE*/
+.fixed-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #222;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+/* YOUR CODE HERE*/
+
+/* SOLUTION: https://gist.github.com/jorgeberrizbeitia/35d9370b9261be1c421f6cc32d8f37ee  */
