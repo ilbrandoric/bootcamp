@@ -33,3 +33,36 @@ Throughout the bootcamp, I worked on topics including:
   - Team collaboration
 
 ---
+
+## 📁 Repository Structure
+
+The project is organized by bootcamp weeks and days:
+
+week 1
+├── day1
+│   ├── excersices
+│   │   ├── flexbox_positioning
+│   │   │   ├── index.html
+│   │   │   └── styles.css
+│   │   └── selectors_activity
+│   │       ├── index.html
+│   │       └── styles.css
+│   └── labs
+├── day2
+│   ├── excersices
+│   └── labs
+
+
+## 🧩 About Forked Projects
+
+During the bootcamp, some labs and projects are provided as separate repositories.
+
+These projects are:
+- Forked from Ironhack’s GitHub organization
+- Cloned and worked on independently
+- Maintained in their own repositories
+
+This repository is reserved for:
+- Daily exercises
+- Practice work
+- Non-forked labs
