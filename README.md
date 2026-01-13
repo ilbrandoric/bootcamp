@@ -53,6 +53,7 @@ week-1
 │   ├── exercises
 │   └── labs
 
+---
 
 ## 🧩 About Forked Projects
 
@@ -67,3 +68,4 @@ This repository is reserved for:
 - Daily exercises
 - Practice work
 - Non-forked labs
+
