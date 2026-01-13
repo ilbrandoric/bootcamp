@@ -1,0 +1,71 @@
+/* CSS for the card 
+
+Excersice found at: https://gist.github.com/jorgeberrizbeitia/db8fe9dd3f1d843eed220a8d5230aa92
+
+Please format the CSS code below as follows::after
+
+Try to use the card class to target all elements needed.
+You should work with three different elements: div(gray), h1(green) and p(blue).
+The card is separated internally (padding) 20px from the top and 20px from the bottom
+The title is separated by 10px from the right sides, 30px from the left side and 40px from the content.
+The title has a 2px border. Color #178C55
+The title also has an internal separation of 20px from all sides.
+The title text should be centered and uppedcased.
+The content also internal separation of 5px.
+You can use the colors that you want. If you want to use the colors you have in the image, those are:
+Font color: white
+Card background color: #E9E6E6
+Title background color: #78F0B7
+Title border color: #178C55
+Content background color: #24CCDA
+
+
+*/
+
+/*Import Roboto font from Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/*
+
+** This was NOT in the part of the excersice. **
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    
+    margin: 0;
+    padding: 0;
+}
+
+*/
+
+/* Padding shorthand property */    
+
+.card {
+   
+   background-color: #E9E6E6;
+   color: white;
+   font-family: 'Roboto', sans-serif;
+   padding: 20px 0 20px 0;
+   
+   
+}
+
+/* Notice the nested h1 property inside card class */
+
+.card h1 {
+    background-color: #78F0B7;
+    border: 2px solid #178C55;
+    color:white;
+    padding: 20px;
+    margin: 0 10px 40px 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+p {
+    background-color: #24CCDA;
+    color:white;
+    padding: 5px;
+    margin:20px; 
+}
+

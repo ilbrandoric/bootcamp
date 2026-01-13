@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.card {
+  background-color: #E9E6E6;
+  color: white;
+  font-family: Roboto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  /* or */
+  /* padding: 20px 0 20px 0; */
+  /* or */
+  /* padding: 20px 0; */
+}
+
+.card h1 {
+  background-color: #78F0B7;
+  border: 2px solid #178C55;
+  margin-top: 0;
+  margin-right: 10px;
+  margin-bottom: 40px;
+  margin-left: 30px;
+  /* or */
+  /* margin: 0 10px 40px 30px; */
+
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card p {
+  background-color: #24CCDA;
+  padding: 5px;
+}

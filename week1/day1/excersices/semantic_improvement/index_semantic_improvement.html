@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> <!-- Added: ensures proper character encoding -->
+  <title>Semantic HTML Teaching Example</title>
+</head>
+<body>
+
+  <!-- Changed from <div id="main-header"> -->
+  <header> <!-- header = introductory content for the page -->
+    <h1>My Semantic Webpage</h1>
+
+    <!-- Changed from generic <div> -->
+    <nav aria-label="Main navigation"> <!-- nav = primary navigation links -->
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Removed <hr> and wrapped main content properly -->
+  <main> <!-- main = central content of the page -->
+
+    <!-- Changed from <div id="about"> -->
+    <section id="about"> <!-- section = themed content with a heading -->
+      <header> <!-- header = heading for this section -->
+        <h2>About This Page</h2>
+      </header>
+
+      <p>
+        This page demonstrates the use of semantic HTML5 tags in a clean and readable structure.
+      </p>
+    </section>
+
+    <!-- Changed from <div id="news"> -->
+    <section id="news"> <!-- section = logical grouping -->
+      <h2>Latest News</h2>
+
+      <!-- Changed from inner <div> -->
+      <article> <!-- article = standalone piece of content -->
+        <p>
+          HTML5 has introduced a variety of semantic tags to better structure content and improve accessibility.
+        </p>
+
+        <p>
+          <strong>Note:</strong> Using proper tags helps both humans and machines understand your content.
+        </p>
+      </article>
+    </section>
+
+    <!-- Changed from generic <div> -->
+    <aside> <!-- aside = related but non-essential content -->
+      <h2>Quick Tip</h2>
+      <p>
+        You can use <code>&lt;aside&gt;</code> for callouts, sidebars, or notes not central to the main flow.
+      </p>
+    </aside>
+
+    <!-- Changed from <div id="contact"> -->
+    <section id="contact"> <!-- section = distinct content area -->
+      <header> <!-- header = section introduction -->
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out:</p>
+      </header>
+
+      <!-- Changed from <div> -->
+      <address> <!-- address = contact information -->
+        Email: <a href="mailto:team@example.com">team@example.com</a><br>
+        456 Markup Lane<br>
+        Structure City, CodeLand
+      </address>
+    </section>
+
+  </main>
+
+  <!-- Changed from generic bottom <div> -->
+  <footer> <!-- footer = closing content for the page -->
+    <p>&copy; 2025 Web Semantics Inc.</p>
+
+    <!-- Changed from <div> -->
+    <nav aria-label="Footer links"> <!-- nav = secondary navigation -->
+      <a href="">GitHub</a>
+      <a href="">LinkedIn</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
