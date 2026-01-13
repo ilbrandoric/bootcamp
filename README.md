@@ -38,9 +38,10 @@ Throughout the bootcamp, I worked on topics including:
 
 The project is organized by bootcamp weeks and days:
 
-week 1
+```text
+week-1
 ├── day1
-│   ├── excersices
+│   ├── exercises
 │   │   ├── flexbox_positioning
 │   │   │   ├── index.html
 │   │   │   └── styles.css
@@ -49,7 +50,7 @@ week 1
 │   │       └── styles.css
 │   └── labs
 ├── day2
-│   ├── excersices
+│   ├── exercises
 │   └── labs
 
 
