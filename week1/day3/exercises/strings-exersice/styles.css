@@ -1,0 +1,38 @@
+body {
+  background-color: #0E1117;
+  color: #E5EDF2;
+  font-family: "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  padding: 20px;
+}
+
+hr {
+  border-color: rgb(67, 67, 67);
+}
+
+b {
+  padding: 10px;
+  background-color: #444857;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+span {
+  background-color: rgb(49, 49, 49);
+  color: rgb(255, 255, 255);
+  padding: 3px 5px;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+p, li {
+  margin-top: 5px;
+}
+
+a, a:visited {
+  color: rgb(102, 102, 243);
+}
+
+.test {
+  color: rgb(255, 180, 180)
+}
