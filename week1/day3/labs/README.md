@@ -1,4 +1,4 @@
 ## Link to lab
 
 This activity was forked and cloned. Please see:
-https://github.com/ilbrandoric/lab-css-ironhack-news
+[https://github.com/ilbrandoric/lab-javascript-basic-algorithms](https://github.com/ilbrandoric/lab-javascript-basic-algorithms)
