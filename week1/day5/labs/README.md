@@ -1,4 +1,5 @@
 ## Link to lab
 
 This activity was forked and cloned. Please see:
-https://github.com/ironhack-labs/lab-javascript-book-objects/pull/639
+
+[https://github.com/ilbrandoric/lab-javascript-book-objects](https://github.com/ilbrandoric/lab-javascript-book-objects)
