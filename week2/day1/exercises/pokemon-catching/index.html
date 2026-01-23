@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+     
+  <h2>Instructions</h2>
+
+  <p>Open the script.js and Console part of this repository and write the code
+    following these instructions</p>
+
+  <hr>
+
+  <div>
+
+    <h3>Iteration 1: Pokemon</h3>
+
+    <p>Modify the <span>Pokemon</span> class by following the instructions below:</p>
+
+    <h4>Class properties</h4>
+
+    <li>should receive two arguments (one for the name and one for the type of the new created pokemons)</li>
+    <li>should have a property <span>name</span>. The value will come from the 1st argument</li>
+    <li>should have a property <span>type</span>. The value will come from the 2st argument</li>
+
+    <h4>The <span>attack()</span> method</h4>
+    
+    <li>should be a function</li>
+    <li>It should have no parameters</li>
+    <li>should return the following string: "{NAME} uses {TYPE} attack" using the class properties</li>
+
+  </div>
+
+  <hr>
+
+  <div>
+
+    <h3>Iteration 2: Trainer</h3>
+
+    <p>Modify the <span>Trainer</span> class by following the instructions below:</p>
+
+    <h4>Class properties</h4>
+
+    <li>should receive one argument (for the name of the created trainers)</li>
+    <li>should have a property <span>name</span>. The value will come from the argument</li>
+    <li>should have a property called <span>ownedPokemons</span> with a starting value of an empty array => []</li>
+
+    <h4>The <span>catchPokemon()</span> method</h4>
+    
+    <li>should be a function</li>
+    <li>should have one parameter (The pokemon object to be catched when the method is called)</li>
+    <li>should use the parameter and add it to the array property of the class <span>ownedPokemons</span></li>
+    <li>This method doesn't need a return value, it's only action will be updating the array when called</li>
+
+  </div>
+
+  <hr>
+
+  <div>
+
+    <h3>Iteration 3: Creating new objects based on the classes</h3>
+
+    <h4>The trainer</h4>
+
+    <li>use the variable <span>trainer</span> and assign a new object of the <span>Trainer</span> class</li>
+    <li>don't forget to give your trainer a name as it's argument!</li>
+
+    <li class="indented-li">Example - name: "Ash"</li>
+
+    <h4>The pokemons</h4>
+    
+    <li>use the variable <span>pokemon1</span>, <span>pokemon2</span> and <span>pokemon3</span> and assign a new object of the <span>Pokemon</span> class to each one</li>
+    <li>don't forget to give your pokemon a name and type as it's arguments!</li>
+    <li>examples:</li>
+
+    <li class="indented-li">name: "Bulbasaur" type: "grass"</li>
+    <li class="indented-li">name: "Squirtle" type: "water"</li>
+    <li class="indented-li">name: "Charmander" type: "fire"</li>
+
+    <h4>Catching some pokemons</h4>
+    
+    <li>invoke the <span>catchPokemon</span> method of the <span>trainer</span> object to catch the three created pokemon objects:</li>
+    <li class="indented-li"><span>pokemon1</span>, <span>pokemon2</span> and <span>pokemon3</span></li>
+    <li>remember, the method takes the pokemon to add as an argument!</li>
+    <li>this should be done in three separate lines</li>
+
+  </div>
+  
+  <div>
+
+    <h4>Once done, save your file and you should have the following output</h4>
+      
+    <pre class="code">
+      *** TEST 1. Should print the name of trainer and amount of pokemons (3) ***
+      Ash has caught 3 Pokemons!
+      *** TEST 2. Should print each of the three pokemon attacking ***
+      Bulbasaur uses grass attack
+      Charmander uses fire attack
+      Squirtle uses water attack
+    </pre>
+
+    <p>The output result could vary depending on how you named your trainer and your pokemon</p>
+
+  </div>
+
+  <hr>
+
+  <div>
+    <h2>Activity Solution</h2>
+
+    <p>Check the solution for this activity <a href="https://gist.github.com/jorgeberrizbeitia/39dfcd1e7e4204296f3269dcc401a7a9">here</a></p>
+    
+  </div>
+
+</body>
+
+  </body>
+</html>
