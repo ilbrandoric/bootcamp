@@ -5,45 +5,141 @@
 ======WARNING: DO NOT TRY TO RUN THIS FILE WITH NODE.JS ======
 !!!!!! RUN THE CODE IN THE BROWSER CONSOLE TO SEE THE OUTPUT !!!!!!
 
+=========================================================
+
+
+
+=========================
+ITERATION 1 – INSTRUCTIONS
+=========================
+
+GOAL:
+When the button is clicked, update all 3 pokemon cards
+with a random background color and a random pokemon image.
+
+
+
+====================================================
+ITERATION 1 – WHAT YOU NEED TO DO
+====================================================
+
+PART A – Button click logic
+---------------------------
+
+1. Select all divs with class "pokemon-card"
+2. Loop through them (forEach or for loop)
+3. For each card, call: selectRandomPokemon(card)
+
+PART B – Card update logic
+--------------------------
+4. Change the background color of the card
+   → use the variable: randomColor
+
+5. Find the <img> inside the card
+   → use cardNode.querySelector("img")
+
+6. Change the image source
+   → use the variable: randomPokemonSrc
+
+ORDER:
+- Do Part A first and test the button
+- Then do Part B and test again
+====================================================
 */
 
 
+/* ======================
+   CODE (DO NOT MOVE)
+   ====================== */
 
-// *************************
-// ****** ITERATION 1 ******
-// *************************
+let updatePokemonsButton = document.querySelector('#btn-update'); //Targets button
 
-// When you click on the button "Update the Dream Team" 3 random pokemon should appear on the cards, each with a random background color. Don't worry, we will give you the code for selecting a random pokemon and color.
-
-// First, read the HTML and the JS code already written carefully.
-
-// When you are ready to code, start inside the addEventListener with the instructions 1 and 2. Once you are done, test by clicking on the button and then move to the function randomPoke with instructions 3 to 5.
-
-let updatePokemonsButton = document.querySelector('#btn-update');
 updatePokemonsButton.addEventListener('click', () => {
-  // 1. Select a NodeList with all 3 divs of class "pokemon-card"
-  // 2. Iterate over the nodeList with a for loop or a forEach method and for every node, invoke the function selectRandomPokemon. Pass each card node as an argument to the function.
-  // After you save, you should see the console.log inside the selectRandomPokemon function, 3 times.
-  // ... continue with step 4 in the selectRandomPokemon function
+
+  /*  Step 1 + 2 go here 
+  
+  On click it targets all pokemon cards and loops through them.
+  On every loop it calls a function that generates a random pokemon.
+
+  */
+  let pokemonCards = document.querySelectorAll('.pokemon-card');
+  pokemonCards.forEach((card) => {
+    selectRandomPokemon(card);
+  });
+
+
 });
 
-const selectRandomPokemon = (cardNode) => {
-  console.log('working inside each pokemon card!', cardNode);
+// This function receives a card node afrom the loop above and updates it
 
-  // * DON'T CHANGE BELOW LINE * It will give you a random color in hexadecimal inside the randomColor variable
+const selectRandomPokemon = (cardNode) => {
+
+  /* DO NOT MODIFY */
   let randomColor = '#' + Math.random().toString(16).slice(-6);
-  // * DON'T CHANGE BELOW LINE * It will give you a random pokemon image source inside the randomPokemonSrc variable
+
+  /*
+
+  Math.random()
+  Creates a random number between 0 and 1 like : 0.34829384
+
+  .toString(16)
+  Converts that number into a hexadecimal string (base 16, used for colors)
+  Example: "0.593fa9c2"
+
+  .slice(-6)
+  Takes the last 6 characters of that string
+  Example: "fa9c2b"
+
+  '#' + ...
+  Adds the # in front to make it a valid CSS color
+  Example: #fa9c2b  
+
+
+  */
+
+  /* DO NOT MODIFY */
   let randomPokemonSrc = `https://tinyurl.com/ironhack-pokemons/${
     Math.floor(Math.random() * 150) + 1
   }.svg`;
 
-  // 3. Change the background color of the card. Use the randomColor variable as the value.
+  /* TODO: Steps 4, 5, 6 go here */
 
-  // 4. Look for the img node inside the cardNode. You will have to use a querySelector on the card node (not on the whole document)
+  // Targets all 3 cards in one go
+  let colorSwap = document.getElementsByClassName('pokemon-card');
 
-  // 5. Change the src of the img tag. Use the randomPokemonSrc variable as the value.
+  /*  Output:
+  
+  [
+  div.pokemon-card,
+  div.pokemon-card,
+  div.pokemon-card
+  ]
 
-  // after you are done, test by clicking the button "Update the Dream Team"
+  */
+
+ // 4. Change background color of all three cards at once
+  cardNode.style.backgroundColor = randomColor;
+
+  // 5. Targets <img> on all three cards at once:
+  const imgNode = cardNode.querySelector("img");
+
+  // 6. Update image source on all three cards at once:
+  imgNode.src = randomPokemonSrc;
+
+
+
+  
+  /* 
+  
+  NOTES: We're already looping inside the pokemon-card class and making changes to each card individually.
+  NO NEED to loop again here.
+  
+  */
+
 };
+
+
+
+
 
 // ACTIVITY SOLUTION: https://gist.github.com/jorgeberrizbeitia/c76e6ab25ed745e23691dee4ea597ee3
