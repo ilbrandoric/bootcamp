@@ -13,6 +13,7 @@ function print() {
 //print();
 
 console.log('*** Iteration 2 ***');
+
 // Complete the function blast() that does the following:
 
 // - it should create a timer variable that starts at 0 and will increase the timer value by 1 every second.
@@ -25,7 +26,41 @@ console.log('*** Iteration 2 ***');
 
 // - After the value reaches 15 it should automatically stop
 
-function blast() {}
+
+/* This is a normal timer running until 10 seconds to help you visualize the concept */
+
+let seconds = 0;
+
+// const normalTimer = setInterval(() => {
+//   seconds++;
+//   console.log(seconds);
+
+//   if (seconds === 10) {
+//     clearInterval(normalTimer);
+//   }
+// }, 1000);
+
+
+/* Modified timer with events */
+
+function blast() {
+  let timer = 0;
+  const intervalId = setInterval(() => {
+    timer++;
+    if (timer % 3 === 0 && timer % 5 === 0) {
+      console.log("BOOM BANG!!");
+    } else if (timer % 3 === 0) {
+      console.log("BOOM!!");
+    } else if (timer % 5 === 0) {
+      console.log("BANG!!");
+    } else {
+      console.log(timer);
+    }
+    if (timer === 15) {
+      clearInterval(intervalId);
+    }
+  }, 1000);
+}
 
 blast();
 
@@ -60,10 +95,36 @@ console.log('*** Iteration 3 ***');
 // HINT: to solve this think about creating each asynchronous effect separatly and using Math.random for the time.
 // BONUS: As a bonus add a final message that says "That's all folks! the race ended!" that should only appear after all console.logs have been printed.
 
+// function wackyRacers() {
+//   console.log('Peter Perfect arrived!');
+//   console.log('Rock Slag arrived!');
+//   console.log('Penelope Pitstop arrived!');
+// }
+
+// wackyRacers();
+
+
+
+
 function wackyRacers() {
-  console.log('Peter Perfect arrived!');
-  console.log('Rock Slag arrived!');
-  console.log('Penelope Pitstop arrived!');
-}
+
+  let message1 = 'Peter Perfect arrived!';
+  let message2 = 'Rock Slag arrived!';
+  let message3 = 'Penelope Pitstop arrived!';
+
+
+  //Random delays between 0 and 2000 milliseconds
+  let delay1 = Math.random() * 2000;
+  let delay2 = Math.random() * 2000;
+  let delay3 = Math.random() * 2000;
+
+  setTimeout(() => console.log(message1), delay1);
+  setTimeout(() => console.log(message2), delay2);
+  setTimeout(() => console.log(message3), delay3);
+  console.log(1);
+  setTimeout(() => console.log(2), 1000);
+  setTimeout(() => console.log(3), 0);
+  console.log(4);
+};
 
 wackyRacers();
